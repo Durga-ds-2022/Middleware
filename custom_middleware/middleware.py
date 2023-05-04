@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 
 def simple_middleware(get_response):
+    print("+++++++++++++++", get_response)
     # One-time configuration and initialization.
 
     def middleware(request):
@@ -16,3 +17,5 @@ def simple_middleware(get_response):
         return response
 
     return middleware
+
+
